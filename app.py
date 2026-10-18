@@ -22,7 +22,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-
+db.init_db()
 # Secret key configuration with safe development fallback
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'global-edu-dev-secret-key-2026-safe-fallback-x99')
 app.config['TEMPLATES_AUTO_RELOAD'] = True
